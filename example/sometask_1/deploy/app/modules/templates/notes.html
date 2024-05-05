@@ -1,0 +1,25 @@
+{% extends 'mainPage.html' %}
+{% block pageContent %}
+<h1 class="greeting">Stored Secret Notes</h1>
+{% if get_flashed_messages() %}
+{% for message in get_flashed_messages() %}
+    <h1>{{ message }}</h3>
+{% endfor %}
+{% endif %}
+{% if not current_user.notes %}
+
+<div class="empty">
+    <img src="{{ url_for('static', filename='Images/SVG/box.svg') }}" alt="">
+    <p>You do not have any saved note!</p>
+</div>
+
+{% else %}
+
+    <div class="tweet">
+        {{current_user.notes}}
+    </div>
+
+
+{% endif %}
+
+{% endblock %}

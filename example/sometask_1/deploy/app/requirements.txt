@@ -1,0 +1,9 @@
+
+Flask
+flask_wtf
+Flask-Login
+Flask-SQLAlchemy
+requests
+werkzeug==2.1.2
+WTForms==2.3.3
+email_validator

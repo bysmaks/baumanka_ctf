@@ -1,0 +1,6 @@
+{% extends 'bool_base.html' %}
+
+{% block message %}
+<h1>Oop! Username contains prohibited characters!</h1>
+<p>Go back to the <a href="{{ url_for('home') }}">start page</a> and try register again.</p>
+{% endblock %}

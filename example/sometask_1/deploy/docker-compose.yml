@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  netwitter:
+    build: .
+    restart: always
+    ports:
+     - "5000:5000"
+    environment:
+      CLIENT_ID : 19ed2fddf99246249ddb7e30002d5bce
+      CLIENT_SECRET : 796ed0a970f64c08ab91f9cbadaa2a09
+      BASE_URL : 'http://5.188.150.109:9001'
+      SECRET_KEY : 'h6j3U6W8q2G4A4M2w6R4L6W8f9X3sS1E3N3N3V3P3J2Q4E4Y4F1'
