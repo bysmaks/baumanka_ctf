@@ -1,18 +1,19 @@
 Открыв сайт можно увидеть тест на то, какой Вы персонаж из Игры Престолов. Попробуем выбрать различные варианты ответов и ввести свое имя. 
 
-![My Image](https://raw.githubusercontent.com/bysmaks/baumanka_ctf/main/web/house_of_pain/solve/img/1.png?token=GHSAT0AAAAAACGPRNOYAU2AVJBCY3YX63USZRXXHFA)
+![image](https://github.com/bysmaks/baumanka_ctf/assets/74861618/ed274eb8-51d8-4481-bbb2-dd5268b04b7a)
 
 Видим, что мы принадлежим дому Грейджоев. Раз здесь Flask и имя рендерится, то лучше всего попробовать поискать SSTI Jinja инъекцию.
 
-![My Image](https://raw.githubusercontent.com/bysmaks/baumanka_ctf/main/web/house_of_pain/solve/img/2.png?token=GHSAT0AAAAAACGPRNOZAFF6HL4LC3I3KHCCZRXXDSA)
+![image](https://github.com/bysmaks/baumanka_ctf/assets/74861618/5a040b4b-c1fd-40c2-9369-5def2b4a8497)
 
 Рационально перейти в Burp Suite. Видим, что отправив фигурные скобки, нашу атаку блокируют.
 
-![My image](https://raw.githubusercontent.com/bysmaks/baumanka_ctf/main/web/house_of_pain/solve/img/3.png?token=GHSAT0AAAAAACGPRNOYDRHDQOKTTMCL6DLMZRXXETA)
+![image](https://github.com/bysmaks/baumanka_ctf/assets/74861618/8fbb4457-9c23-40e0-a48d-c56c1b3f1b05)
 
 Видимо, мы действительно движемся в нужную сторону. Перебрав различные пэйлоады, понимаем, что фильтров там достаточно, надо почитать про другие методы байпасса. Вспоминаем про технику отправки многострочного запроса, другими словами \r\n. 
 Действительно, кажется пэйлоад проходит. Пробуем найти другой, позволяющий прочитать файл. Читаем и сдаем флаг.
 
-![My image](https://raw.githubusercontent.com/bysmaks/baumanka_ctf/main/web/house_of_pain/solve/img/4.png?token=GHSAT0AAAAAACGPRNOZYEHOLT6QXZEISIIQZRXXFTQ)
+![image](https://github.com/bysmaks/baumanka_ctf/assets/74861618/4e718d76-f006-4a6e-a76f-cbf72da80f9e)
 
-![My image](https://github.com/bysmaks/baumanka_ctf/blob/main/web/house_of_pain/solve/img/5.png)
+![image](https://github.com/bysmaks/baumanka_ctf/assets/74861618/4cbb09d5-9860-44f1-bef1-5261a2a7c359)
+
